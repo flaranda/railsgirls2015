@@ -1,0 +1,17 @@
+<section class="single-picture">
+  <figure>
+    <%= image_tag( @photo.picture ) %>
+    <figcaption>
+      <a href=""></a>
+      <a href=""></a>
+      <a class="delete" href="<%= photo_path( @photo ) %>" data-method="delete">
+        Delete photo
+        <%= image_tag "delete.png" %>
+      </a>
+      <% @comments.each do |comment| %>
+        <div class="comment"><%= comment.text %></div>
+      <% end %>
+      <%= render "comments/form" %>
+    </figcaption>
+  </figure>
+</section>
