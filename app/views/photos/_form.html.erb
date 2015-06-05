@@ -1,7 +1,9 @@
 <%= form_for( @photo ) do |f| %>
   <div id="upload_file">
     <button class="upload_button">Upload photo</button>
-    <input id="file_photo" placeholder="No hay ningún fichero." disabled="disabled">
+
+    <input id="file_photo" >
+
     <%= f.file_field :picture, { id: "upload" } %>
   </div>
 <% end %>

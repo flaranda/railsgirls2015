@@ -2,8 +2,6 @@
   <figure>
     <%= image_tag( @photo.picture ) %>
     <figcaption>
-      <a href=""></a>
-      <a href=""></a>
       <a class="delete" href="<%= photo_path( @photo ) %>" data-method="delete">
         Delete photo
         <%= image_tag "delete.png" %>
